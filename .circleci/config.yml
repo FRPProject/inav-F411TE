@@ -11,7 +11,7 @@ jobs:
     steps:
       - checkout
       - ruby/install:
-          version: '2.7'       
+          version: '2.0.0'       
       - run: sudo apt install ruby
       - run:
           name: test
