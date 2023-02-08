@@ -1,6 +1,6 @@
 version: 2.1
 orbs:
-  ruby: circleci/ruby@2.0
+  ruby: circleci/ruby@1.1
 executors:
   exectr:
     docker:
@@ -8,8 +8,6 @@ executors:
 jobs:
   test:
     executor: exectr
-    docker:
-      - image: cimg/ruby:2.7-node
     steps:
       - ruby/install-deps
       - checkout     
