@@ -8,6 +8,7 @@ jobs:
     executor: exectr
     steps:
       - checkout
+      - run: sudo apt install ruby
       - run:
           name: test
           command: |
