@@ -1,11 +1,11 @@
 version: 2.1
-orbs:
-  win: circleci/windows@4.1.1 # The Windows orb gives you everything you need to start using the Windows executor
-
+executors:
+  exectr:
+    docker:
+      - image: frpproject/inav-f411te
 jobs:
-  test: # name of your job
-    executor: win/server-2022 # use one of the executors defined within the windows orb
-    #executor: exectr
+  test:
+    executor: exectr
     steps:
       - checkout
       - run:
