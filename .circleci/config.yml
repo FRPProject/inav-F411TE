@@ -1,4 +1,6 @@
 version: 2.1
+orbs:
+  ruby: circleci/ruby@2.0.0
 executors:
   exectr:
     docker:
@@ -8,6 +10,8 @@ jobs:
     executor: exectr
     steps:
       - checkout
+      - ruby/install:
+          version: '2.7'       
       - run: sudo apt install ruby
       - run:
           name: test
