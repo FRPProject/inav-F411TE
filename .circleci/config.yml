@@ -2,7 +2,7 @@ version: 2.1
 executors:
   exectr:
     docker:
-      - image: frpproject/inav-f411te
+      - image: dockerben/cpptemplate:latest
 jobs:
   test:
     executor: exectr
