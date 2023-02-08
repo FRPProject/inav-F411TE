@@ -9,8 +9,10 @@ jobs:
   test:
     executor: exectr
     steps:
-      - ruby/install-deps
-      - checkout     
+      - checkout
+      - ruby/install:
+          version: '2.7'      
+      - run: sudo apt install ruby
       - run:
           name: test
           command: |
