@@ -9,6 +9,7 @@ jobs:
   test:
     executor: exectr
     steps:
+      - ruby/install-deps
       - checkout     
       - run:
           name: test
