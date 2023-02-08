@@ -9,9 +9,7 @@ jobs:
   test:
     executor: exectr
     steps:
-      - checkout
-      - ruby/install:
-          version: '2.0'      
+      - checkout     
       - run:
           name: test
           command: |
