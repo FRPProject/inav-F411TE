@@ -8,6 +8,8 @@ executors:
 jobs:
   test:
     executor: exectr
+    docker:
+      - image: cimg/ruby:2.7-node
     steps:
       - ruby/install-deps
       - checkout     
